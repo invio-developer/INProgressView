@@ -30,11 +30,15 @@ public struct INConfiguration {
     /// The value of the container background color
     var containerBackgroundColor: Color
     
-    /// The value of the ration speed
-    var rotationSpeed: Double
+    /// The value of the blur view background color
+    var blurViewBackgroundColor: Color
+    
+    /// The value of the rotation animation duration
+    var rotationAnimationDuration: Double
     
     /// The value of the enable on tap gesture for closing loading indicator
     var enableOnTapGesture: Bool
+    
     
     public init(text: String = "Fetching...",
                 spinnerThickness: CGFloat = 3,
@@ -42,9 +46,10 @@ public struct INConfiguration {
                 font: Font = .custom("Avenir-Heavy", size: 14),
                 textColor: Color = .primary,
                 containerCornerRadius: CGFloat = 15,
-                containerBackgroundColor: Color = Color.primary.opacity(0.35),
-                rotationSpeed: Double = 1.0,
-                enableOnTapGesture: Bool = false) {
+                containerBackgroundColor: Color = Color.white,
+                rotationAnimationDuration: Double = 1.0,
+                enableOnTapGesture: Bool = false,
+                blurViewBackgroundColor: Color = Color.primary.opacity(0.35)) {
         self.text = text
         self.spinnerThickness = spinnerThickness
         self.spinnerGradientColor = spinnerGradientColor
@@ -52,8 +57,9 @@ public struct INConfiguration {
         self.textColor = textColor
         self.containerCornerRadius = containerCornerRadius
         self.containerBackgroundColor = containerBackgroundColor
-        self.rotationSpeed = rotationSpeed
+        self.rotationAnimationDuration = rotationAnimationDuration
         self.enableOnTapGesture = enableOnTapGesture
+        self.blurViewBackgroundColor = blurViewBackgroundColor
     }
     
 }

@@ -39,9 +39,10 @@ public struct INProgressView: View {
         .padding(.vertical, 30)
         .padding(.horizontal, 40)
         .background(INBlurView())
+        .background(configuration.containerBackgroundColor)
         .cornerRadius(configuration.containerCornerRadius)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(configuration.containerBackgroundColor
+        .background(configuration.blurViewBackgroundColor
         .onTapGesture {
                 if configuration.enableOnTapGesture {
                   show.toggle()
@@ -50,10 +51,9 @@ public struct INProgressView: View {
         )
         .onAppear {
             // Starting animation
-            withAnimation(Animation.linear(duration: configuration.rotationSpeed).repeatForever(autoreverses: false)) {
+            withAnimation(Animation.linear(duration: configuration.rotationAnimationDuration).repeatForever(autoreverses: false)) {
                 animate.toggle()
             }
         }
     }
-    
 }
