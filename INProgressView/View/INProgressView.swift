@@ -45,7 +45,7 @@ public struct INProgressView: View {
         .background(configuration.blurViewBackgroundColor
         .onTapGesture {
                 if configuration.enableOnTapGesture {
-                  show.toggle()
+                   show = false
                 }
             }
         )
