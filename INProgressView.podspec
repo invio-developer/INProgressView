@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "INProgressView"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.4"
   spec.summary      = "Loading Indicator Framework in SwiftUI"
   spec.description  = "A simple, easy and custom iOS Loading Indicator written in SwiftUI"
   spec.homepage     = "https://github.com/invio-developer/INProgressView"
