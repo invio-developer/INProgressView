@@ -33,6 +33,9 @@ public struct INConfiguration {
     /// The value of the ration speed
     var rotationSpeed: Double
     
+    /// The value of the enable on tap gesture for closing loading indicator
+    var enableOnTapGesture: Bool
+    
     public init(text: String = "Fetching...",
                 spinnerThickness: CGFloat = 3,
                 spinnerGradientColor: [Color] = [Color.primary.opacity(0), Color.primary],
@@ -40,7 +43,8 @@ public struct INConfiguration {
                 textColor: Color = .primary,
                 containerCornerRadius: CGFloat = 15,
                 containerBackgroundColor: Color = Color.primary.opacity(0.35),
-                rotationSpeed: Double = 1.0) {
+                rotationSpeed: Double = 1.0,
+                enableOnTapGesture: Bool = false) {
         self.text = text
         self.spinnerThickness = spinnerThickness
         self.spinnerGradientColor = spinnerGradientColor
@@ -49,6 +53,7 @@ public struct INConfiguration {
         self.containerCornerRadius = containerCornerRadius
         self.containerBackgroundColor = containerBackgroundColor
         self.rotationSpeed = rotationSpeed
+        self.enableOnTapGesture = enableOnTapGesture
     }
     
 }

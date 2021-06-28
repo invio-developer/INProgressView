@@ -41,7 +41,13 @@ public struct INProgressView: View {
         .background(INBlurView())
         .cornerRadius(configuration.containerCornerRadius)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.primary.opacity(0.35))
+        .background(configuration.containerBackgroundColor
+        .onTapGesture {
+                if configuration.enableOnTapGesture {
+                  show.toggle()
+                }
+            }
+        )
         .onAppear {
             // Starting animation
             withAnimation(Animation.linear(duration: configuration.rotationSpeed).repeatForever(autoreverses: false)) {
