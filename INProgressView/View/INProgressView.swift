@@ -27,30 +27,24 @@ public struct INProgressView: View {
         VStack(spacing: 28) {
             Circle()
                 // For dark mode adoption
-                .stroke(AngularGradient(gradient: .init(colors: configuration.gradientColor), center: .center), style: .init(lineWidth: configuration.lineWidth))
+                .stroke(AngularGradient(gradient: .init(colors: configuration.spinnerGradientColor), center: .center), style: .init(lineWidth: configuration.spinnerThickness))
                 .frame(width: 80, height: 80)
                 // Animation
                 .rotationEffect(.init(degrees: animate ? 360 : 0))
             
-            Text(configuration.placeHolder)
+            Text(configuration.text)
                 .font(configuration.font)
-                .foregroundColor(configuration.fontColor)
+                .foregroundColor(configuration.textColor)
         }
         .padding(.vertical, 30)
         .padding(.horizontal, 40)
-        .background(BlurView())
-        .background(configuration.containerBackgroundColor)
+        .background(INBlurView())
         .cornerRadius(configuration.containerCornerRadius)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onTapGesture {
-            withAnimation {
-                // Close View
-                show.toggle()
-            }
-        }
+        .background(Color.primary.opacity(0.35))
         .onAppear {
             // Starting animation
-            withAnimation(Animation.linear(duration: configuration.linearDuration).repeatForever(autoreverses: false)) {
+            withAnimation(Animation.linear(duration: configuration.rotationSpeed).repeatForever(autoreverses: false)) {
                 animate.toggle()
             }
         }

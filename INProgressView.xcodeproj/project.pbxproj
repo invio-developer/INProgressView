@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		66465ED92689AFD900481E94 /* INConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66465ED82689AFD900481E94 /* INConfiguration.swift */; };
+		66CA23742689DF35007079EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CA23732689DF35007079EC /* AppDelegate.swift */; };
+		66E1ACCB2689E342003EBAA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1ACCA2689E342003EBAA4 /* SceneDelegate.swift */; };
 		66EFDF42268669C50009DFB1 /* INProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 66EFDF40268669C50009DFB1 /* INProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66EFDF4A268749620009DFB1 /* INProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFDF49268749620009DFB1 /* INProgressView.swift */; };
-		66EFDF4E268749920009DFB1 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFDF4D268749920009DFB1 /* BlurView.swift */; };
-		66EFDF58268749D00009DFB1 /* DemoINProgressViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFDF57268749D00009DFB1 /* DemoINProgressViewApp.swift */; };
+		66EFDF4E268749920009DFB1 /* INBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFDF4D268749920009DFB1 /* INBlurView.swift */; };
 		66EFDF5A268749D00009DFB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFDF59268749D00009DFB1 /* ContentView.swift */; };
 		66EFDF5C268749D20009DFB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EFDF5B268749D20009DFB1 /* Assets.xcassets */; };
 		66EFDF5F268749D20009DFB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EFDF5E268749D20009DFB1 /* Preview Assets.xcassets */; };
@@ -19,13 +20,14 @@
 
 /* Begin PBXFileReference section */
 		66465ED82689AFD900481E94 /* INConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INConfiguration.swift; sourceTree = "<group>"; };
+		66CA23732689DF35007079EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66E1ACCA2689E342003EBAA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		66EFDF3D268669C50009DFB1 /* INProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = INProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EFDF40268669C50009DFB1 /* INProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INProgressView.h; sourceTree = "<group>"; };
 		66EFDF41268669C50009DFB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66EFDF49268749620009DFB1 /* INProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INProgressView.swift; sourceTree = "<group>"; };
-		66EFDF4D268749920009DFB1 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		66EFDF4D268749920009DFB1 /* INBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INBlurView.swift; sourceTree = "<group>"; };
 		66EFDF55268749D00009DFB1 /* DemoINProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoINProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		66EFDF57268749D00009DFB1 /* DemoINProgressViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoINProgressViewApp.swift; sourceTree = "<group>"; };
 		66EFDF59268749D00009DFB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		66EFDF5B268749D20009DFB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66EFDF5E268749D20009DFB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		66EFDF4C268749820009DFB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				66EFDF4D268749920009DFB1 /* BlurView.swift */,
+				66EFDF4D268749920009DFB1 /* INBlurView.swift */,
 				66465ED82689AFD900481E94 /* INConfiguration.swift */,
 				66EFDF49268749620009DFB1 /* INProgressView.swift */,
 			);
@@ -91,7 +93,8 @@
 		66EFDF56268749D00009DFB1 /* DemoINProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				66EFDF57268749D00009DFB1 /* DemoINProgressViewApp.swift */,
+				66CA23732689DF35007079EC /* AppDelegate.swift */,
+				66E1ACCA2689E342003EBAA4 /* SceneDelegate.swift */,
 				66EFDF59268749D00009DFB1 /* ContentView.swift */,
 				66EFDF5B268749D20009DFB1 /* Assets.xcassets */,
 				66EFDF60268749D20009DFB1 /* Info.plist */,
@@ -220,7 +223,7 @@
 			files = (
 				66465ED92689AFD900481E94 /* INConfiguration.swift in Sources */,
 				66EFDF4A268749620009DFB1 /* INProgressView.swift in Sources */,
-				66EFDF4E268749920009DFB1 /* BlurView.swift in Sources */,
+				66EFDF4E268749920009DFB1 /* INBlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,8 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66CA23742689DF35007079EC /* AppDelegate.swift in Sources */,
 				66EFDF5A268749D00009DFB1 /* ContentView.swift in Sources */,
-				66EFDF58268749D00009DFB1 /* DemoINProgressViewApp.swift in Sources */,
+				66E1ACCB2689E342003EBAA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +374,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = INProgressView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +402,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = INProgressView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,7 +427,7 @@
 				DEVELOPMENT_TEAM = FCMRLFUFXA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DemoINProgressView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,7 +449,7 @@
 				DEVELOPMENT_TEAM = FCMRLFUFXA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DemoINProgressView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

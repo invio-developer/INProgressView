@@ -19,12 +19,15 @@ struct ContentView: View {
                     Button("Show INProgressView") {
                         withAnimation {
                             isLoading.toggle()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                                isLoading.toggle()
+                            }
                         }
                     }
                 }
             }
             if isLoading {
-                INProgressView(show: $isLoading, configuration: .init(placeHolder: "Loading..", lineWidth: 1.5, gradientColor: [.white, .orange], fontColor: .orange))
+                INProgressView(show: $isLoading, configuration: .init(text: "Loading.."))
             }
         }
         .edgesIgnoringSafeArea(.all)
