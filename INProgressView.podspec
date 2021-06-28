@@ -8,10 +8,10 @@ Pod::Spec.new do |spec|
 
   spec.license      = "MIT"
   spec.author       = { "Mustafa Yesil" => "myesil@invio.com" }
-  spec.platform     = :ios, "14.0"
+  spec.platform     = :ios, "13.0"
   spec.source       = { :git => "https://github.com/invio-developer/INProgressView.git", :tag => "#{spec.version}" }
 
 
-  spec.source_files  = "INProgressView"
+  spec.source_files  = "INProgressView/*/*"
 
 end
