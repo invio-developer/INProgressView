@@ -144,14 +144,15 @@ struct ContentView: View {
                     }.padding(.top, 40)
                 }
             }
+            ZStack {
+                if isLoading {
+                    INProgressView(show: $isLoading, configuration: .init(text: text, spinnerThickness: thickness, spinnerGradientColor: [gradientFirstColor, gradientSecondColor], textColor: textColor, containerCornerRadius: containerCornerRadius, containerBackgroundColor: containerBackgroundColor, rotationAnimationDuration: rotationAnimationDuration, enableOnTapGesture: enableOnTapGesture, blurViewBackgroundColor: blurViewBackgroundColor))
+                        .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+                        .edgesIgnoringSafeArea(.all)
+                }
+            }
             
         }
-        ZStack {
-            if isLoading {
-                INProgressView(show: $isLoading, configuration: .init(text: text, spinnerThickness: thickness, spinnerGradientColor: [gradientFirstColor, gradientSecondColor], textColor: textColor, containerCornerRadius: containerCornerRadius, containerBackgroundColor: containerBackgroundColor, rotationAnimationDuration: rotationAnimationDuration, enableOnTapGesture: enableOnTapGesture, blurViewBackgroundColor: blurViewBackgroundColor))
-                    .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
-                    .edgesIgnoringSafeArea(.all)
-            }
-        }
+       
     }
 }
